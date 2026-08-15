@@ -1,0 +1,275 @@
+/* ============================================
+   1. RESET + TOKENS
+   Design tokens = your palette/type/spacing kept
+   as CSS variables, so you only define them once
+   and reuse everywhere. Change a value here and
+   it updates the whole site.
+   ============================================ */
+
+:root {
+  /* colors */
+  --bg: #1b1f2a;          /* charcoal base */
+  --bg-alt: #212633;      /* slightly lighter panels */
+  --text: #edeae0;        /* warm off-white */
+  --text-dim: #8b93a7;    /* muted gray-blue for secondary text */
+  --accent: #4fd1c5;      /* cyan — links, interactive */
+  --accent-warm: #e8a33d; /* amber — highlights, numbers */
+  --border: #313848;
+
+  /* type */
+  --font-display: 'JetBrains Mono', monospace;
+  --font-body: 'Inter', sans-serif;
+
+  /* spacing scale — reuse these instead of random px values */
+  --space-sm: 0.75rem;
+  --space-md: 1.5rem;
+  --space-lg: 3rem;
+  --space-xl: 6rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* padding/border no longer add to element width — saves headaches */
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* a reusable "page section" width so everything lines up */
+.hero, .work, .about, .contact, .site-header, .site-footer {
+  max-width: 760px;
+  margin: 0 auto;
+  padding-left: var(--space-md);
+  padding-right: var(--space-md);
+}
+
+/* ============================================
+   2. HEADER / NAV
+   flexbox: puts logo on one side, nav links on
+   the other, vertically centered. This is the
+   #1 layout tool you'll reach for.
+   ============================================ */
+
+.site-header {
+  display: flex;
+  justify-content: space-between; /* pushes children to opposite ends */
+  align-items: center;
+  padding-top: var(--space-md);
+  padding-bottom: var(--space-md);
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.cursor {
+  color: var(--accent-warm);
+  animation: blink 1.1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.site-header nav {
+  display: flex;
+  gap: var(--space-md); /* gap = spacing between flex/grid children, no margin hacks needed */
+}
+
+.site-header nav a {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  transition: color 0.15s ease;
+}
+
+.site-header nav a:hover,
+.site-header nav a:focus-visible {
+  color: var(--accent);
+}
+
+/* ============================================
+   3. HERO
+   ============================================ */
+
+.hero {
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  color: var(--accent);
+  margin-bottom: var(--space-sm);
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.2rem); /* clamp = responsive font size without a media query */
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: var(--space-md);
+}
+
+.hero-sub {
+  color: var(--text-dim);
+  max-width: 46ch; /* ch = width of "0" character — great unit for readable line length */
+  margin-bottom: var(--space-lg);
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  padding: 0.7rem 1.2rem;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* ============================================
+   4. SECTION TITLES (shared)
+   ============================================ */
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+/* ============================================
+   5. WORK / DEVLOG ENTRIES
+   grid with two columns: a fixed-width number
+   column, and a flexible content column.
+   ============================================ */
+
+.work {
+  padding-bottom: var(--space-xl);
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr; /* fixed 3.5rem, then "take the rest" */
+  gap: var(--space-md);
+  padding: var(--space-lg) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.entry:last-child {
+  border-bottom: none;
+}
+
+.entry-num {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--accent-warm);
+  font-weight: 700;
+}
+
+.entry-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.entry-meta {
+  font-size: 0.8rem;
+  color: var(--accent);
+  font-family: var(--font-display);
+  margin-bottom: var(--space-sm);
+}
+
+.entry-body p:not(.entry-meta) {
+  color: var(--text-dim);
+  margin-bottom: var(--space-sm);
+  max-width: 60ch;
+}
+
+.entry-link {
+  font-size: 0.85rem;
+  color: var(--accent);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
+}
+
+.entry-link:hover,
+.entry-link:focus-visible {
+  border-color: var(--accent);
+}
+
+/* On small screens, drop the number to its own row above the text
+   instead of squeezing a 2-column grid onto a narrow phone. */
+@media (max-width: 480px) {
+  .entry {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+}
+
+/* ============================================
+   6. ABOUT / CONTACT
+   ============================================ */
+
+.about, .contact {
+  padding-bottom: var(--space-xl);
+}
+
+.about p, .contact p {
+  color: var(--text-dim);
+  max-width: 60ch;
+  margin-bottom: var(--space-md);
+}
+
+.contact-links {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.contact-links a {
+  font-family: var(--font-display);
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 2px;
+}
+
+/* ============================================
+   7. FOOTER
+   ============================================ */
+
+.site-footer {
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-lg);
+  border-top: 1px solid var(--border);
+  color: var(--text-dim);
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+}
+
+/* respects users who've asked their OS to reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .cursor { animation: none; }
+}
