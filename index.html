@@ -3,110 +3,375 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>n1ro — portfolio</title>
+  <meta name="description" content="NXLL Studios — portfolio of Niño Nagrampa, a computer science student, graphic designer, and game developer.">
+  <title>NXLL STUDIOS — Niño Nagrampa</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <div class="site-shell">
 
-  <!-- ============ NAV ============ -->
-  <header class="site-header">
-    <a href="https://github.com/nxllzlla" class="logo">n1ro<span class="cursor">_</span></a>
-    <nav>
-      <a href="#work">work</a>
-      <a href="#about">about</a>
-      <a href="#contact">contact</a>
-    </nav>
-  </header>
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+    <header class="topbar">
+      <a class="wordmark" href="#home">NXLL STUDIOS</a>
 
-  <!-- ============ HERO ============ -->
-  <section class="hero">
-    <p class="eyebrow">// computer science student · game dev · graphic design</p>
-    <h1>I build worlds,<br>then figure out<br>how to ship them.</h1>
-    <p class="hero-sub">
-      Currently prototyping competitive arena games in Godot and picking up
-      graphic design along the way. This site is a running log of that work —
-      finished or not.
-    </p>
-    <a href="#work" class="btn">see the devlog ↓</a>
-  </section>
-
-  <!-- ============ WORK / PROJECTS ============ -->
-  <section id="work" class="work">
-    <h2 class="section-title">devlog</h2>
-
-    <article class="entry">
-      <div class="entry-num">01</div>
-      <div class="entry-body">
-        <h3>Barangay Brawl</h3>
-        <p class="entry-meta">Godot · top-down arena fighter · concept phase</p>
-        <p>
-          A competitive arena fighter starring creatures from Philippine
-          folklore — Tikbalang, Aswang, Kapre, and six others, each with a
-          full folklore-inspired ability kit. Bold flat-shaded character art
-          with glowing per-character accents, Filipino folk-art patterns
-          worked into the UI rather than the characters themselves.
-        </p>
-        <a href="#" class="entry-link">read the design breakdown →</a>
+      <div class="topbar-center" aria-hidden="true">
+        <span></span><span></span>
       </div>
-    </article>
 
-    <article class="entry">
-      <div class="entry-num">02</div>
-      <div class="entry-body">
-        <h3>Celebes: Abyssal Tides</h3>
-        <p class="entry-meta">Godot · 3v3 arena brawler · game jam entry</p>
-        <p>
-          A 1-month jam entry built with a small team — a 3v3 esports-style
-          brawler where two rival factions dive for Abyssal Pearls before an
-          ancient sea serpent. 16-bit pixel art, kelp-zone stealth mechanics,
-          a shrinking-map sudden death phase.
-        </p>
-        <a href="#" class="entry-link">read the design breakdown →</a>
+      <div class="topbar-right">
+        <span class="language">EN / PH</span>
+        <a href="#contact">CONTACT</a>
       </div>
-    </article>
+    </header>
 
-    <article class="entry">
-      <div class="entry-num">03</div>
-      <div class="entry-body">
-        <h3>Multi-tool app</h3>
-        <p class="entry-meta">Godot 4 · mobile · in progress</p>
-        <p>
-          A personal productivity app — notes, to-dos, calendar, and a timer
-          — built local-first with cloud sync planned later. My first real
-          push into app-style UI after mostly building games.
-        </p>
-        <a href="#" class="entry-link">read the design breakdown →</a>
-      </div>
-    </article>
-  </section>
+    <!-- =====================================================
+         HOME / INDEX
+         ===================================================== -->
+    <main id="home">
 
-  <!-- ============ ABOUT ============ -->
-  <section id="about" class="about">
-    <h2 class="section-title">about</h2>
-    <p>
-      Write 2–3 sentences here about who you are, what you're studying, and
-      what kind of work you want to be doing more of. Keep it specific —
-      "I like making games" is forgettable, "I like designing tight,
-      readable combat systems" is not.
-    </p>
-  </section>
+      <section class="index-page">
+        <div class="index-sidebar">
+          <div class="index-meta">
+            <span>NXLL STUDIOS</span>
+            <span>PORTFOLIO / 2026</span>
+            <span>PHILIPPINES</span>
+          </div>
 
-  <!-- ============ CONTACT ============ -->
-  <section id="contact" class="contact">
-    <h2 class="section-title">contact</h2>
-    <p>Open to collabs, jam teams, and feedback.</p>
-    <div class="contact-links">
-      <a href="mailto:you@example.com">email</a>
-      <a href="#">github</a>
-      <a href="#">itch.io</a>
-    </div>
-  </section>
+          <div class="index-title">
+            <span>GRAPHIC DESIGN</span>
+            <span>GAME DEVELOPMENT</span>
+            <span>VISUAL EXPERIMENTS</span>
+          </div>
 
-  <footer class="site-footer">
-    <p>built by hand, no framework.</p>
-  </footer>
+          <div class="index-bottom">
+            <span>SELECTED WORKS</span>
+            <a href="#works">VIEW →</a>
+          </div>
+        </div>
 
+        <div class="index-main">
+          <div class="section-bar">
+            <span>01 / SELECTED WORKS</span>
+            <span>SCROLL FOR NEXT</span>
+          </div>
+
+          <!-- Leave the image blank for your own work -->
+          <a class="hero-project" href="#works">
+            <div class="image-placeholder hero-placeholder">
+              <span>INSERT FEATURED PROJECT IMAGE</span>
+            </div>
+            <div class="project-caption">
+              <div>
+                <span class="eyebrow">FEATURED PROJECT</span>
+                <h1>YOUR PROJECT<br>GOES HERE</h1>
+              </div>
+              <span class="arrow">↘</span>
+            </div>
+          </a>
+
+          <div class="intro-strip">
+            <span>01</span>
+            <p>
+              NXLL STUDIOS IS A SMALL INDEPENDENT CREATIVE STUDIO
+              FOCUSED ON GRAPHIC DESIGN, VISUAL IDENTITY, AND GAMES.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           ABOUT
+           ===================================================== -->
+      <section class="about-page" id="about">
+        <div class="section-bar">
+          <span>02 / ABOUT</span>
+          <span>IDENTITY / PRACTICE / PROCESS</span>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-sidebar">
+            <div class="receipt-label">PERSONAL FILE</div>
+
+            <div class="portrait-placeholder image-placeholder">
+              <span>YOUR PHOTO</span>
+            </div>
+
+            <div class="side-facts">
+              <p><span>NAME</span> NIÑO NAGRAMPA</p>
+              <p><span>STUDIO</span> NXLL STUDIOS</p>
+              <p><span>BASED</span> PHILIPPINES</p>
+              <p><span>STATUS</span> STUDENT / FREELANCER</p>
+            </div>
+          </div>
+
+          <div class="about-copy">
+            <div class="about-heading">
+              <span class="stamp">NXLL<br>FILE 002</span>
+              <h2>DESIGNER.<br>DEVELOPER.<br>STUDENT.</h2>
+            </div>
+
+            <p class="lead">
+              I'M NIÑO — A COMPUTER SCIENCE STUDENT, GRAPHIC DESIGNER,
+              AND GAME DEVELOPER BUILDING THINGS AT THE INTERSECTION
+              OF CODE, VISUAL CULTURE, AND PLAY.
+            </p>
+
+            <p>
+              I LIKE MAKING WORK THAT FEELS DISTINCT. THAT CAN MEAN A
+              BRAND IDENTITY, A POSTER, AN INTERFACE, A GAME, OR AN
+              EXPERIMENT THAT DOESN'T REALLY FIT INTO ONE CATEGORY.
+            </p>
+
+            <p>
+              NXLL STUDIOS IS MY PERSONAL CREATIVE SPACE FOR THOSE
+              PROJECTS — PART DESIGN PRACTICE, PART GAME LAB, PART
+              COLLECTION OF STRANGE IDEAS.
+            </p>
+
+            <div class="ascii-mark" aria-label="NXLL Studios decorative mark">
+              +---------------------------+<br>
+              | N X L L   / /   S T U D I O S    |<br>
+              +---------------------------+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           WORKS
+           ===================================================== -->
+      <section class="works-page" id="works">
+        <div class="section-bar">
+          <span>03 / WORKS</span>
+          <span>SELECTED PROJECT ARCHIVE</span>
+        </div>
+
+        <div class="works-layout">
+          <aside class="works-index">
+            <div class="archive-label">ARCHIVE INDEX</div>
+
+            <ol>
+              <li><a href="#project-01">01 / BRANDING</a></li>
+              <li><a href="#project-02">02 / POSTER</a></li>
+              <li><a href="#project-03">03 / GAME</a></li>
+              <li><a href="#project-04">04 / DIGITAL</a></li>
+            </ol>
+
+            <div class="archive-note">
+              MORE PROJECTS<br>
+              WILL BE ADDED<br>
+              HERE.
+            </div>
+          </aside>
+
+          <div class="projects">
+            <article class="project" id="project-01">
+              <div class="image-placeholder project-image">
+                <span>PROJECT 01 IMAGE</span>
+              </div>
+              <div class="project-details">
+                <div>
+                  <span class="project-number">01</span>
+                  <h3>PROJECT TITLE</h3>
+                </div>
+                <div>
+                  <span>BRANDING / IDENTITY</span>
+                  <span>2026</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project offset" id="project-02">
+              <div class="image-placeholder project-image">
+                <span>PROJECT 02 IMAGE</span>
+              </div>
+              <div class="project-details">
+                <div>
+                  <span class="project-number">02</span>
+                  <h3>PROJECT TITLE</h3>
+                </div>
+                <div>
+                  <span>GRAPHIC DESIGN / PRINT</span>
+                  <span>2026</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project" id="project-03">
+              <div class="image-placeholder project-image">
+                <span>PROJECT 03 IMAGE</span>
+              </div>
+              <div class="project-details">
+                <div>
+                  <span class="project-number">03</span>
+                  <h3>PROJECT TITLE</h3>
+                </div>
+                <div>
+                  <span>GAME DEVELOPMENT</span>
+                  <span>2026</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project offset" id="project-04">
+              <div class="image-placeholder project-image">
+                <span>PROJECT 04 IMAGE</span>
+              </div>
+              <div class="project-details">
+                <div>
+                  <span class="project-number">04</span>
+                  <h3>PROJECT TITLE</h3>
+                </div>
+                <div>
+                  <span>DIGITAL / UI</span>
+                  <span>2026</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           SERVICES / COMMISSIONS
+           ===================================================== -->
+      <section class="services-page" id="services">
+        <div class="section-bar">
+          <span>04 / SERVICES</span>
+          <span>COMMISSIONS OPEN</span>
+        </div>
+
+        <div class="receipt">
+          <div class="receipt-top">
+            <div>
+              <strong>NXLL STUDIOS</strong><br>
+              GRAPHIC DESIGN / GAMES
+            </div>
+            <div class="receipt-date">
+              NO. 0001<br>
+              2026
+            </div>
+          </div>
+
+          <div class="receipt-rule"></div>
+
+          <h2>COMMISSIONS<br>OPEN</h2>
+
+          <div class="receipt-rule"></div>
+
+          <div class="service-row">
+            <span>01.</span>
+            <span>BRAND IDENTITY</span>
+          </div>
+          <div class="service-row">
+            <span>02.</span>
+            <span>POSTERS / GRAPHICS</span>
+          </div>
+          <div class="service-row">
+            <span>03.</span>
+            <span>LOGO DESIGN</span>
+          </div>
+          <div class="service-row">
+            <span>04.</span>
+            <span>GAME UI / VISUALS</span>
+          </div>
+          <div class="service-row">
+            <span>05.</span>
+            <span>ILLUSTRATION</span>
+          </div>
+
+          <div class="receipt-rule"></div>
+
+          <h3>HOW TO WORK WITH ME</h3>
+
+          <div class="process-row">
+            <span>01</span>
+            <p>REACH OUT<br><small>SEND A MESSAGE WITH YOUR IDEA.</small></p>
+          </div>
+          <div class="process-row">
+            <span>02</span>
+            <p>DELIVERABLES<br><small>WHAT EXACTLY DO YOU NEED?</small></p>
+          </div>
+          <div class="process-row">
+            <span>03</span>
+            <p>TIMELINE<br><small>WHEN DO YOU NEED IT?</small></p>
+          </div>
+          <div class="process-row">
+            <span>04</span>
+            <p>DIRECTION<br><small>REFERENCES / MOOD / NOTES.</small></p>
+          </div>
+          <div class="process-row">
+            <span>05</span>
+            <p>BUDGET<br><small>WE'LL FIGURE OUT THE REST.</small></p>
+          </div>
+
+          <div class="receipt-rule"></div>
+
+          <div class="receipt-footer">
+            <p>THANK YOU FOR SUPPORTING<br>INDEPENDENT DESIGN.</p>
+            <div class="receipt-barcode" aria-hidden="true">
+              ||| || |||| | || || |||||||||
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           CONTACT
+           ===================================================== -->
+      <section class="contact-page" id="contact">
+        <div class="section-bar">
+          <span>05 / CONTACT</span>
+          <span>LET'S MAKE SOMETHING</span>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-heading">
+            <span class="small-label">INQUIRIES / COMMISSIONS / COLLABS</span>
+            <h2>LET'S<br>MAKE<br>WORK.</h2>
+          </div>
+
+          <div class="contact-info">
+            <div class="contact-block">
+              <span>EMAIL</span>
+              <a href="mailto:nironagrampa212o7@gmail.com">nironagrampa212o7@gmail.com</a>
+            </div>
+
+            <div class="contact-block">
+              <span>SOCIAL</span>
+              <a href="#">INSTAGRAM / @NXLLSTUDIOS</a>
+              <a href="#">GITHUB / NXLLZLLA</a>
+            </div>
+
+            <div class="contact-block">
+              <span>AVAILABILITY</span>
+              <p>AVAILABLE FOR SELECT<br>FREELANCE PROJECTS.</p>
+            </div>
+
+            <a class="contact-button" href="mailto:hello@nxllstudios.com">
+              SEND AN EMAIL <span>↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+    <footer class="footer">
+      <span>NXLL STUDIOS</span>
+      <span>NIÑO NAGRAMPA / 2026</span>
+      <a href="#home">BACK TO TOP ↑</a>
+    </footer>
+
+  </div>
 </body>
 </html>
